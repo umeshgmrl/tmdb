@@ -1,6 +1,6 @@
 {
     "name": "tmdb-api",
-    "alias": ["tmdb"],
+    "alias": ["tmdb-api-chandu"],
     "version": 2,
     "builds": [
         {
