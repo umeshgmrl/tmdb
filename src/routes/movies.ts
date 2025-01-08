@@ -4,6 +4,8 @@ import { getMovies } from '../controllers/movies.js';
 
 const router = express.Router();
 
-router.get('/', asyncHandler(getMovies));
+router.get('/', (req, res, next) => {
+    asyncHandler(getMovies)(req, res, next);
+});
 
 export default router;
