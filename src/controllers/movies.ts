@@ -7,11 +7,11 @@ const yearSchema = z.object({
   year: z.string().regex(/^\d{4}$/).transform(Number),
 });
 
-export async function getMovies(req: Request, res: Response) {
+export const getMovies = async (req: Request, res: Response): Promise<void> => {
   const result = yearSchema.safeParse(req.query);
-  
   if (!result.success) {
-    return res.status(400).json({ error: 'Invalid year format. Use YYYY.' });
+    res.status(400).json({ error: 'Invalid year format. Use YYYY.' });
+    return;
   }
 
   const { year } = result.data;
@@ -48,4 +48,4 @@ export async function getMovies(req: Request, res: Response) {
   );
 
   res.json(moviesWithEditors);
-}
+};
