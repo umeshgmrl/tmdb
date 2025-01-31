@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        AWS_ACCESS_KEY_ID = credentials('b1440d66-e7be-498f-8fec-c2467edb2a7d	')
-        AWS_SECRET_ACCESS_KEY = credentials('b1440d66-e7be-498f-8fec-c2467edb2a7d	')
+        AWS_ACCESS_KEY_ID = credentials('b1440d66-e7be-498f-8fec-c2467edb2a7d')
+        AWS_SECRET_ACCESS_KEY = credentials('b1440d66-e7be-498f-8fec-c2467edb2a7d')
         S3_BUCKET = 'rajesh-react-app'
     }
 
